@@ -1,0 +1,10 @@
+version: v1alpha1
+metadata:
+  name: rpi4-firmware
+  version: "$VERSION"
+  author: Alessio Pascolini
+  description: |
+    This system extension provides Raspberry pi 4 firmware.
+  compatibility:
+    talos:
+      version: ">= v1.0.0"

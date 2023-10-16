@@ -1,2 +1,4 @@
 # renovate: datasource=github-releases extractVersion=^microcode-(?<version>.*)$ depName=intel/Intel-Linux-Processor-Microcode-Data-Files
 INTEL_UCODE_VERSION: 20230808
+
+RPI4_FIRMWARE_VERSION: v0.3.0-41-g58ce509

@@ -61,6 +61,7 @@ TARGETS = \
 		nvidia-fabricmanager \
 		nvidia-open-gpu-kernel-modules \
 		qemu-guest-agent \
+		rpi4-firmware \
 		stargz-snapshotter \
 		tailscale \
 		thunderbolt \

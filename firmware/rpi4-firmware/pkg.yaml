@@ -1,0 +1,21 @@
+name: rpi4-firmware
+variant: scratch
+shell: /toolchain/bin/bash
+dependencies:
+  - stage: base
+  - image: "{{ .PKGS_PREFIX }}/raspberrypi-firmware:{{ .RPI4_FIRMWARE_VERSION }}"
+    from: /boot
+    to: /boot
+steps:
+  - prepare:
+      - sed -i 's#$VERSION#{{ .VERSION }}#' /pkg/manifest.yaml
+    install:
+      - |
+        mkdir -p /rootfs/usr/install/arm64/raspberrypi-firmware/boot
+        cp -R -p /boot /rootfs/usr/install/arm64/raspberrypi-firmware
+        ls -l /rootfs/usr/install/arm64/raspberrypi-firmware
+finalize:
+  - from: /rootfs
+    to: /rootfs
+  - from: /pkg/manifest.yaml
+    to: /
